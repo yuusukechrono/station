@@ -1,0 +1,34 @@
+<header><b>閲覧</b></header><br>
+
+<p>物件名:
+<%= @property.name %></p>
+
+<p>賃料:
+<%= @property.rent %></p>
+
+<p>住所:
+<%= @property.address %></p>
+
+<p>築年数:
+<%= @property.age %></p>
+
+<p>備考:
+<%= @property.memo %></p>
+
+<hr size="2" noshade>
+
+  <% @stations.each do |s| %>
+  <p>路線名:
+  <%= s.route_name %></p>
+
+  <p>駅名:
+  <%= s.station_name %></p>
+
+  <p>徒歩分数:
+  <%= s.time %></p>
+  <% end %>
+
+<br><br>
+         
+<%= link_to '編集', edit_property_path(@property.id)  %>
+<%= link_to '戻る', properties_path %>
