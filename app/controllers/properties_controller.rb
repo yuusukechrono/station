@@ -20,7 +20,7 @@ class PropertiesController < ApplicationController
   end
 
   def create
-    @property = Property.create(property_params)
+    @property = Property.new(property_params)
     if params[:back]
       render :new
     else
